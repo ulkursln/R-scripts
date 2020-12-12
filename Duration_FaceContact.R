@@ -1,5 +1,5 @@
 #	Check & fix Model Assumptions:
-#http://www.bodowinter.com/tutorial/bw_LME_tutorial1.pdf 
+#http://www.bodowinter.com/uploads/1/2/9/3/129362560/bw_lme_tutorial1.pdf
 
 
 ##Read Data
@@ -15,7 +15,7 @@ plot(Duration~Role, data=mydata)
 #plot(Duration~Role, data=mydata[mydata$SessionID=1,])
 ####################################################
 
-#(1)Detect outliers (Bu kýsým evaluation partý çýkartmamýzý saðladý ve )
+#(1)Detect outliers (Bu kÃ½sÃ½m evaluation partÃ½ Ã§Ã½kartmamÃ½zÃ½ saÃ°ladÃ½ ve )
 boxplot(mydata$Duration, horizontal = TRUE)
 mydata$Duration[order(mydata$Duration,decreasing = T)[1:1000]]
 nrow(mydata)
@@ -279,7 +279,7 @@ Anova(model_selected)
 
 ####################################################
 ####Check assumptions
-### Here’s	the	conditions	 that	have	 to	be	satisfied	
+### HereÂ’s	the	conditions	 that	have	 to	be	satisfied	
 ##in	order	for	the	linear	model	to	be	meaningful:
 
 ##Lets check the linearity assumptions:
@@ -327,7 +327,7 @@ qqp(mydata_withoutOutlier_duration_test$Duration, "norm")
 # from	your	predicted	values.	
 # Again,	 we	 can	 check	 this	 by	 looking	 at	 a	 residual	 plot.
 # If the	variance is	not	homoscedastic: e.g.
-#it’s	smaller	in	the	lower	range	and	larger	in	the	higher	range,
+#itÂ’s	smaller	in	the	lower	range	and	larger	in	the	higher	range,
 #	transforming	your	data	often	helps.	Consider	a	log-transform	
 
 
@@ -376,7 +376,7 @@ library(emmeans)
 
 #https://cran.rstudio.com/web/packages/emmeans/vignettes/interactions.html
 
-# Examining this plot, we see that the “medium” mean is not always higher; so the marginal means, 
+# Examining this plot, we see that the Â“mediumÂ” mean is not always higher; so the marginal means, 
 # and the way they compare, does not represent what is always the case. Moreover, what is evident in the plot 
 # is that the peak for medium-size cars occurs for only one of the two filter types. 
 # So it seems more useful to do the comparisons of size separately for each filter type. This is easily done, 
